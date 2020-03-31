@@ -11,12 +11,9 @@ function mapStateToProps({ authedUser, users }) {
 }
 
 class Navbar extends React.Component {
-  onLogout = () => {
-    this.props.dispatch(unsetAuthedUser());
-  }
-
-  onClick = (e) => {
+  onLogout = (e) => {
     e.preventDefault();
+    this.props.dispatch(unsetAuthedUser());
     this.props.history.push('/');
   }
 
@@ -52,7 +49,7 @@ class Navbar extends React.Component {
             </div>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" onClick={this.onClick}>
+            <NavLink className="nav-link" to="/" onClick={this.onLogout}>
               Logout
             </NavLink>
           </li>
