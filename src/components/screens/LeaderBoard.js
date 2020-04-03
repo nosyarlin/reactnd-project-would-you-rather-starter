@@ -28,7 +28,7 @@ export class LeaderBoard extends React.Component {
     const { rankedUsers } = this.props;
     return (
       <div>
-        <LoginRedirect fromLocation='/leaderboard'/>
+        <LoginRedirect fromLocation="/leaderboard"/>
         <Navbar/>
         <div className="card">
           <div className="card-header">

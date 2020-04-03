@@ -25,17 +25,17 @@ class Navbar extends React.Component {
       <nav className="navbar navbar-expand-md nav-pills">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to='/home'>
+            <NavLink className="nav-link" to="/home">
               Home
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to='/leaderboard'>
+            <NavLink className="nav-link" to="/leaderboard">
               Leaderboard
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to='/add'>
+            <NavLink className="nav-link" to="/add">
               New Question
             </NavLink>
           </li> 

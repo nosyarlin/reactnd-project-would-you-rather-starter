@@ -66,7 +66,7 @@ export default class QuestionCard extends React.Component {
           <form onSubmit={this.onVote}>
             <div className="funkyradio">
               {this.getRadioButton(
-                'optionOne',
+                "optionOne",
                 optionOneText,
                 hasAnswered
               )}
@@ -75,7 +75,7 @@ export default class QuestionCard extends React.Component {
                 totalVotes
               )}
               {this.getRadioButton(
-                'optionTwo',
+                "optionTwo",
                 optionTwoText,
                 hasAnswered
               )}
