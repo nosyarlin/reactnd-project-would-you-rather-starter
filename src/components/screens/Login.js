@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { setAuthedUser } from '../../actions/authedUser';
 import { Redirect, withRouter } from 'react-router-dom';
 
-function mapStateToProps({ users }) {
-  return { users };
+function mapStateToProps({ users, authedUser }) {
+  return { users, authedUser };
 }
 
 export class Login extends React.Component {
@@ -15,8 +15,7 @@ export class Login extends React.Component {
       : null;
     this.state = {
       selected: null,
-      loggedIn: false,
-      from: fromLocation || { pathname: '/home' },
+      fromLocation: fromLocation || { pathname: '/home' },
     }
   }
 
@@ -38,10 +37,10 @@ export class Login extends React.Component {
   }
 
   render() {
-    const { users } = this.props;
-    const { selected, from, loggedIn } = this.state;
-    if (loggedIn) {
-      return <Redirect to={from}/>
+    const { users, authedUser } = this.props;
+    const { selected, fromLocation } = this.state;
+    if (authedUser) {
+      return <Redirect to={fromLocation}/>
     }
     return (
       <div className="row">

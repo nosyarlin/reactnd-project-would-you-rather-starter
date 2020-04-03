@@ -11,7 +11,7 @@ class Card extends React.Component {
   render() {
     const { users, userId, cardBody } = this.props;
     return (
-      <div className="card mx-2 mt-2">
+      <div className="card mx-2 mt-2 mb-2">
         <div className="card-header">
           <img
             className="avatar"

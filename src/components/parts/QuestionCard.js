@@ -18,16 +18,19 @@ export default class QuestionCard extends React.Component {
   getVotesBar = (votes, totalVotes) => {
     const progress = Math.round(votes / totalVotes * 100);
     return (
-      <div className="progress mb-3">
-        <div 
-          className="progress-bar"
-          role="progressbar"
-          style={{width: `${progress}%`}}
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          {`${progress}%`}
+      <div>
+        <div className="progress mb-3">
+          <div 
+            className="progress-bar"
+            role="progressbar"
+            style={{width: `${progress}%`}}
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            {`${progress}%`}
+          </div>
         </div>
+        <p>{votes} votes</p>
       </div>
     );
   }
@@ -42,6 +45,7 @@ export default class QuestionCard extends React.Component {
           value={value}
           onChange={this.onCheck}
           disabled={disabled}
+          checked={value === this.state.answer}
         />
         <label
           htmlFor={value}
@@ -56,7 +60,6 @@ export default class QuestionCard extends React.Component {
     const { hasAnswered, optionOneText, optionTwoText,
             numOptionOneVotes, numOptionTwoVotes } = this.props;
     const totalVotes = numOptionOneVotes + numOptionTwoVotes;
-    console.log(this.state);
     return (
       <div className="card-body">
         <div>

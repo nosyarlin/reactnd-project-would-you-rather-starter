@@ -21,7 +21,7 @@ function mapStateToProps({ authedUser, users, questions }) {
 
 export class Home extends React.Component {
   state = {
-    showAnswered: true,
+    showAnswered: false,
   }
 
   render() {
