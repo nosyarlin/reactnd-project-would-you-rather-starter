@@ -7,8 +7,10 @@ to play the game.
 ## Getting Started
 Just clone the project and run 
 
-`yarn install`
-`yarn start`
+```
+yarn install
+yarn start
+```
 
 ## Features
 * Login page where you can choose to be any user
